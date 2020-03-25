@@ -38,10 +38,9 @@
 		
 		<!-- PostgreSQL driver dependency -->
 	    <dependency>
-	        <groupId>org.postgresql</groupId>
-	        <artifactId>postgresql</artifactId>
-	        <version>9.4.1208</version>
-	        <scope>runtime</scope>
+	        <groupId>com.h2database</groupId>
+	        <artifactId>h2</artifactId>
+
 	    </dependency>
     	<!-- Spting data jpa dependencies -->
 	    <dependency>
