@@ -36,7 +36,7 @@ export class SchedulerService {
         }
         this.options.search = params;
 
-        return this._http.get(this.scheduleJobUrl, this.options)
+        return this._http.post(this.scheduleJobUrl, this.options)
         .map(resData => resData.json()); 
     }
 
@@ -46,7 +46,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.isJobWithNamePresentUrl, this.options)
+        return this._http.post(this.isJobWithNamePresentUrl, this.options)
         .map(resData => resData.json()); 
     }
 
@@ -56,7 +56,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.pauseJobUrl, this.options)
+        return this._http.post(this.pauseJobUrl, this.options)
             .map(resData => resData.json()); 
     }
 
@@ -66,7 +66,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.resumeJobUrl, this.options)
+        return this._http.post(this.resumeJobUrl, this.options)
             .map(resData => resData.json()); 
     }
 
@@ -76,7 +76,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.deleteJobUrl, this.options)
+        return this._http.post(this.deleteJobUrl, this.options)
             .map(resData => resData.json()); 
     }
     
@@ -86,7 +86,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.stopJobUrl, this.options)
+        return this._http.post(this.stopJobUrl, this.options)
             .map(resData => resData.json()); 
     }
 
@@ -96,7 +96,7 @@ export class SchedulerService {
             params.set(key, data[key]);
         }
         this.options.search = params;
-        return this._http.get(this.startJobNowUrl, this.options)
+        return this._http.post(this.startJobNowUrl, this.options)
             .map(resData => resData.json()); 
     }
 
@@ -107,7 +107,7 @@ export class SchedulerService {
         }
         this.options.search = params;
 
-        return this._http.get(this.updateJobUrl, this.options)
+        return this._http.post(this.updateJobUrl, this.options)
         .map(resData => resData.json()); 
     }    
 }
